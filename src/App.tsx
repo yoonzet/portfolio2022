@@ -1,8 +1,9 @@
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn, ZoomOut, FadeOut, } from "react-scroll-motion";
 import styled, {keyframes} from "styled-components";
 import './App.css';
-import { AboutMeData, contactData, EduData, SkillsData } from "./components/Data";
-import Project from "./components/Project";
+import { AboutMeData, contactData, EduData, SkillsData } from "./Components/Data";
+
+import Project from "./Components/Project";
 
 
 // ----------First Pg-----------
@@ -210,7 +211,7 @@ function App() {
       <ScrollPage page={0}>
           <FirstPgWrap>
             <Animator animation={batch(ZoomOut(1, 100))}>
-              <Keep Keep>KEEP GOING</Keep>
+              <Keep>KEEP GOING</Keep>
               <FirstP>멈추지 않는 개발자가 되겠습니다.</FirstP>
             </Animator>
           </FirstPgWrap>
@@ -289,9 +290,7 @@ function App() {
             })} 
 
         </ContactWrap>
-
-
-      
+   
    </>
   );
 }

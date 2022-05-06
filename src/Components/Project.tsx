@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import { ProjectData } from "./Data";
+import { ProjectData } from './Data';
 
 const PjBox = styled.div`
   box-shadow: 0 1rem 2rem #1115;
