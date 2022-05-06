@@ -1,13 +1,11 @@
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn, ZoomOut, } from "react-scroll-motion";
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn, ZoomOut, FadeOut, } from "react-scroll-motion";
 import styled, {keyframes} from "styled-components";
 import './App.css';
-import { AboutMeData, EduData } from "./components/Data";
+import { AboutMeData, contactData, EduData, SkillsData } from "./components/Data";
 import Project from "./components/Project";
-import { BsGithub } from "react-icons/bs";
-import { IoCall, IoMailOutline } from "react-icons/io5";
 
 
-// ------First Pg-------
+// ----------First Pg-----------
 
 const bounce = keyframes`
    0% {
@@ -51,7 +49,7 @@ const FirstP = styled.p`
   text-align: center;
 `
 
-// ----- About me -----
+// --------- About me ---------
 const Title = styled.h1`
     color: #eee;
     font-size: 60px;
@@ -67,10 +65,8 @@ const AboutMeWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* padding: 10%; */
 `
 const IntroTitle = styled.h2`
-    /* color: #B150F2; */
 `
 const AboutMe = styled.p`
     width: 50vw;
@@ -78,7 +74,6 @@ const AboutMe = styled.p`
     color: #eee;
     font-size: 18px;
     line-height: 30px;
-    /* transform: translateX(-100%); */
 `
 const Img = styled.img`
   width: 300px;
@@ -119,6 +114,7 @@ const EduDcr = styled.p`
   font-size: 15px;
   line-height: 22px;
 `
+// ---------- Project -----------
 const ProjectWrap = styled.div`
   color: #fff;
   display: grid;
@@ -129,9 +125,39 @@ const ProjectWrap = styled.div`
 
   @media screen and (max-width:1500px) {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
-    padding: 0 30%;
+    padding: 0 20%;
   }
 `
+// ---------- Skills & Tools -----------
+const SkillsWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const SkillH2 = styled.h2`
+  text-align: center;
+  color: #fff;
+`
+const SkillDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 40px;
+`
+const SkillIcons = styled.h1`
+  display: flex;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+`
+const SkillP = styled.p`
+  color: #fff;
+  text-align: center;
+`
+
+
+// ---------- Contact -----------
 const ContactWrap = styled.div`
   width: 100%;
   height: 400px;
@@ -140,22 +166,22 @@ const ContactWrap = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  line-height: 60px;
-  padding: 0 15%;
+  flex-wrap: wrap;
+  padding: 0 20%;
   box-sizing: border-box;
   `
 const Circle = styled.div`
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background-color: #7845BF;
   display: flex;
   justify-content:center;
   align-items: center;
-  font-size: 30px;
+  font-size: 25px;
 `
 const LongCircle = styled.div`
-  height: 60px;
+  height: 45px;
   border-radius: 32px;
   border:1px solid #7845BF;
   display: flex;
@@ -165,6 +191,11 @@ const LongCircle = styled.div`
 const Span = styled.span`
   padding: 0 40px ;
   font-size: 18px;
+  display: none;
+
+  ${LongCircle}:hover &{
+    display: block;
+  }
 `
 
 
@@ -174,8 +205,7 @@ const Span = styled.span`
 
 function App() {
   return (
-    <>
-  
+    <>  
     <ScrollContainer>
       <ScrollPage page={0}>
           <FirstPgWrap>
@@ -189,21 +219,19 @@ function App() {
       <ScrollPage page={1}>
        <Animator animation={batch(ZoomIn())}>
         <AbTitle>ABOUT ME</AbTitle>
-      </Animator>
-      
+      </Animator>      
         <AboutMeWrap>
-      <Animator animation={batch(MoveIn(0, 1000))}>
+         <Animator animation={batch(MoveIn(0, 1000))}>
           <AboutMe>
             <IntroTitle> 안녕하세요 저는 프론트엔드 개발자를 꿈꾸는 이윤지 입니다. </IntroTitle>
             {AboutMeData.text}
           </AboutMe>
-      </Animator>
-      <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
+         </Animator>
+         <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
           <Img src="/img/emoj.png" alt="" />
-        </Animator>
+         </Animator>
         </AboutMeWrap>
-      </ScrollPage>
-      
+      </ScrollPage>      
       
       <ScrollPage page={2}>
        <Animator animation={Fade()}>
@@ -220,51 +248,45 @@ function App() {
                      <Animator animation={MoveIn(100, 80)}>      
                       <EduDcr>{item.description}</EduDcr>
                       </Animator>  
-
                   </EduLi> 
                 )
               })}
             </EduUl>
           </EducationWrap>
         </Animator>
-        <Animator animation={batch(ZoomIn(5, 1))}>
-        <Title>PROJECT</Title>
+        <SkillH2>SKILLS & TOOLS</SkillH2>
+        <Animator animation={batch(Fade())}>
         </Animator>
-
-
-      </ScrollPage>
-
-      {/* <ScrollPage page={3}> */}
-       {/* <Animator animation={batch(FadeIn())}> */}
+      </ScrollPage>          
+        <SkillsWrap>
+            {SkillsData.map(item => {
+              return(
+                <SkillDiv>
+                 <SkillIcons>{item.icon}</SkillIcons>
+                 <SkillP>{item.name}</SkillP>
+                </SkillDiv>
+                )
+                })}
+       </SkillsWrap>
+   </ScrollContainer>
+        <Title>PROJECT</Title>
         <ProjectWrap>
           <Project/>
         </ProjectWrap>
-       {/* </Animator> */}
-      {/* </ScrollPage> */}
-   </ScrollContainer>
 
-          <Title>CONTACT</Title>
+          {/* <Title>CONTACT</Title> */}
         <ContactWrap>
-          <Circle>  
-            <BsGithub />
-          </Circle>
-          <Circle> 
-            <p>B</p> 
-          </Circle>
-
-          <LongCircle> 
-            <Circle>
-            <IoCall />
-            </Circle> 
-          <Span>010-4527-4851</Span>
-          </LongCircle>
-
-          <LongCircle> 
-          <Circle>  
-            <IoMailOutline />
-          </Circle>
-          <Span>yoonzet703@gmail.com</Span>
-          </LongCircle>
+            {contactData.map(item => {
+              return(
+                <LongCircle>
+                  <a href={item.link}><Circle> 
+                  {item.icon}
+                  </Circle>
+                  </a>
+                    <Span>{item.text}</Span>
+                </LongCircle>
+              )
+            })} 
 
         </ContactWrap>
 

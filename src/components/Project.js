@@ -3,41 +3,34 @@ import styled from "styled-components";
 import { ProjectData } from "./Data";
 
 const PjBox = styled.div`
-  /* background-color: #3337; */
-  border-radius: 10px;
   box-shadow: 0 1rem 2rem #1115;
   position: relative;
+  border-radius: 10px;
   overflow: hidden;
 `
 const PjImg = styled.img`
   width: 100%;
-  transition: 0.3s;
-&:hover{
-}
+  height: 100%;
 `
 const HoverWrap = styled.div`
-  text-align: center;
-  width: 110%;
-  height: 100%;
+  width: 100%;
+  height: 102%;
   background-color: #7845BF;
-  padding: 10%;
-  box-sizing: border-box;
+  text-align: center;
   position: absolute;
-  left:50%;
-  transform: translate(-50%, 0);
+  top:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.5s;
   ${PjBox}:hover &{
     opacity: 1;
-      top:50%;
-      transform: translate(-50%, -50%);
+    transform: translate(0, -100%);
     }
 `
 const Dscr = styled.div`
     font-size: 18px;
-`
-const P = styled.p`
-    line-height: 15px;
 `
 const Button = styled.button`
     width: 100px;
@@ -61,14 +54,10 @@ function Project() {
           <HoverWrap>
             <h2>{item.title}</h2>
             <Dscr>{item.description}</Dscr>
-            
-              {/* <P>{item.list1}</P>
-              <P>{item.list2}</P>
-              <P>{item.list3}</P>
-              <P>{item.list4}</P> */}
-
-              <Button><a href={item.view} target="_blank" >view</a></Button>
-              <Button><a href={item.github} target="_blank" >Github</a></Button>
+            <div>
+              <a href={item.view} target="_blank" ><Button>view</Button></a>
+              <a href={item.github} target="_blank" ><Button>Github</Button></a>
+            </div>
         
                          
           </HoverWrap>
