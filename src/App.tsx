@@ -2,7 +2,6 @@ import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveI
 import styled, {keyframes} from "styled-components";
 import './App.css';
 import { AboutMeData, contactData, EduData, SkillsData } from "./Components/Data";
-
 import Project from "./Components/Project";
 
 

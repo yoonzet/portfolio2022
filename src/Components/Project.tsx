@@ -47,7 +47,7 @@ const Button = styled.button`
 function Project() {
   return (
       <>
-    {ProjectData.map(item => {
+      {ProjectData.map(item => {
         return(
           <PjBox>
           <PjImg src={item.img} alt=""/>
