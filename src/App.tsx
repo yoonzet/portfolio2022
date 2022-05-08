@@ -5,9 +5,12 @@ import { AboutMeData, contactData, EduData, SkillsData } from "./Components/Data
 import Project from "./Components/Project";
 
 
+
+
+
 // ----------First Pg-----------
 
-const bounce = keyframes`
+const KeepAni = keyframes`
    0% {
     letter-spacing: 1em;
     -webkit-transform: translateZ(400px);
@@ -30,23 +33,37 @@ const FirstPgWrap = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #A691F2;
+  background: linear-gradient(45deg, rgba(145,128,213,1) 0%, rgba(223,214,255,1) 100%);
+
+
+
+
+
+  @media screen and (max-width:600px) {
+    background-color: #191919;
+  }
+  
 `
 const Keep = styled.h1`
   font-size: 140px;
-  /* text-shadow: -1px 0px #9DB9FF, 0px 1px #9DB9FF, 1px 0px #9DB9FF, 0px -1px #9DB9FF; */
-  color: #B150F2;
-  color: #222;
+  color: #191919;
   font-family: 'Poppins', sans-serif;
   font-style: italic;
-  white-space: nowrap;
-  animation: ${bounce} 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  
+  text-align: center;
+  animation: ${KeepAni} 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  @media screen and (max-width:600px) {
+    font-size: 50px;
+    color: #A691F2;
+  }
   `
 const FirstP = styled.p`
-  color: #222;
+  color: #191919;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  @media screen and (max-width:600px) {
+    color: #A691F2;
+  }
 `
 
 // --------- About me ---------
@@ -54,19 +71,28 @@ const Title = styled.h1`
     color: #eee;
     font-size: 60px;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-
+    font-family: 'Poppins', sans-serif;   
 `
 const AbTitle = styled(Title)`
     margin-top: 300px;
+    @media screen and (max-width:600px) {
+      font-size: 30px;
+      margin-top: 100px;
+  }
 `
 const AboutMeWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* background-color: #333; */
 `
 const IntroTitle = styled.h2`
+ @media screen and (max-width:600px) {
+   font-size: 18px;
+  }
 `
 const AboutMe = styled.p`
     width: 50vw;
@@ -74,11 +100,23 @@ const AboutMe = styled.p`
     color: #eee;
     font-size: 18px;
     line-height: 30px;
+    @media screen and (max-width:600px) {
+      width: 85vw;
+      font-size: 16px;
+      line-height: 27px;
+
+  }
 `
 const Img = styled.img`
   width: 300px;
   height: 100%;
   margin: 5%;
+  @media screen and (max-width:800px) {
+    width:200px;
+  }
+  @media screen and (max-height:700px) {
+    display: none;
+  }
 `
 // education
 const EducationWrap = styled.div`
@@ -87,10 +125,19 @@ const EducationWrap = styled.div`
   justify-content: center;
   margin-top: 150px;
   margin-bottom: 150px;
+  @media screen and (max-width:600px) {
+   flex-direction: column;
+   margin-top: 50px;
+   margin-bottom: 0px;
+   align-items: center;
+  }
 `
 
 const EduH2 = styled.h2`
   margin-right: 30px;
+  @media screen and (max-height:400px) {
+    text-align: center;
+  }
 `
 const EduUl = styled.ul`
   border-left: 1px solid #fff;
@@ -98,6 +145,9 @@ const EduUl = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media screen and (max-width:600px) {
+    /* border-left: 0; */
+  }
 `
 const EduLi = styled.li`
   list-style: none;
@@ -110,11 +160,45 @@ const EduDate = styled.p`
   font-weight: bold;
 `
 const EduDcr = styled.p`
-  width: 450px;
+  width: 50vw;
+  max-width: 400px;
   font-size: 15px;
   line-height: 22px;
 `
+// ---------- Skills & Tools -----------
+const SkillsWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`
+const SkillH2 = styled.h2`
+  text-align: center;
+  color: #fff;
+`
+const SkillDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 40px ;
+`
+const SkillIcons = styled.h1`
+  display: flex;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  transition: 0.3s;
+  &:hover{
+    transform: scale(110%);
+  }
+`
+const SkillP = styled.p`
+  color: #fff;
+  text-align: center;
+`
 // ---------- Project -----------
+
 const ProjectWrap = styled.div`
   color: #fff;
   display: grid;
@@ -127,77 +211,70 @@ const ProjectWrap = styled.div`
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     padding: 0 20%;
   }
+  @media screen and (max-width:600px) {
+    padding: 0 10%;
+  }
 `
-// ---------- Skills & Tools -----------
-const SkillsWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const PjTitle = styled(Title)`
+  margin-top: 150px;
 `
-const SkillH2 = styled.h2`
-  text-align: center;
-  color: #fff;
-`
-const SkillDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 40px;
-`
-const SkillIcons = styled.h1`
-  display: flex;
-  color: #fff;
-  text-align: center;
-  font-size: 50px;
-`
-const SkillP = styled.p`
-  color: #fff;
-  text-align: center;
-`
+
 
 
 // ---------- Contact -----------
 const ContactWrap = styled.div`
-  width: 100%;
+  /* width: 50vw; */
   height: 400px;
   /* background-color: #999; */
   color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 20%;
   box-sizing: border-box;
   `
+  const CircleWrap = styled.div`
+  display: flex;
+  justify-content:center;
+  align-items: center; 
+`
 const Circle = styled.div`
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #7845BF;
+  background-color: #666;
   display: flex;
   justify-content:center;
   align-items: center;
-  font-size: 25px;
-`
-const LongCircle = styled.div`
-  height: 45px;
-  border-radius: 32px;
-  border:1px solid #7845BF;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-`
-const Span = styled.span`
-  padding: 0 40px ;
-  font-size: 18px;
-  display: none;
-
-  ${LongCircle}:hover &{
-    display: block;
+  font-size: 20px;
+  margin: 0 15px;
+  transition: 0.3s;
+  &:hover{
+    background-color: #A691F2;
+  }
+  ${CircleWrap}:hover &{
+    background-color: #A691F2;
   }
 `
 
+const Span = styled.span`
+  font-size: 18px;
+  display: none;
+
+  ${CircleWrap}:hover &{
+    display: block;
+  }
+  
+`
+const Footer = styled.div`
+  /* height: 100vh; */
+  position: relative;
+  bottom: 0;
+  margin-bottom: 3%;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+`
 
 
 // ---------- component -----------
@@ -217,10 +294,10 @@ function App() {
       </ScrollPage>
 
       <ScrollPage page={1}>
+        <AboutMeWrap>
        <Animator animation={batch(ZoomIn())}>
         <AbTitle>ABOUT ME</AbTitle>
-      </Animator>      
-        <AboutMeWrap>
+      </Animator>           
          <Animator animation={batch(MoveIn(0, 1000))}>
           <AboutMe>
             <IntroTitle> 안녕하세요 저는 프론트엔드 개발자를 꿈꾸는 이윤지 입니다. </IntroTitle>
@@ -229,35 +306,35 @@ function App() {
          </Animator>
          <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
           <Img src="/img/emoj.png" alt="" />
-         </Animator>
+         </Animator> 
         </AboutMeWrap>
       </ScrollPage>      
       
-      <ScrollPage page={2}>
-       <Animator animation={Fade()}>
+      {/* <ScrollPage page={2}>
+       <Animator animation={Fade()}> */}
           <EducationWrap>
             <EduH2>Education</EduH2>
             <EduUl>
               {EduData.map(item => {
                 return(       
                   <EduLi>     
-                    <Animator animation={MoveIn(50, -100)}>        
+                    {/* <Animator animation={MoveIn(50, -100)}>         */}
                       <EduTitle>{item.title}</EduTitle>
                       <EduDate>{item.date}</EduDate>
-                     </Animator>  
-                     <Animator animation={MoveIn(100, 80)}>      
+                     {/* </Animator>   */}
+                     {/* <Animator animation={MoveIn(100, 80)}>       */}
                       <EduDcr>{item.description}</EduDcr>
-                      </Animator>  
+                      {/* </Animator>   */}
                   </EduLi> 
                 )
               })}
             </EduUl>
           </EducationWrap>
-        </Animator>
+        {/* </Animator> */}
         <SkillH2>SKILLS & TOOLS</SkillH2>
-        <Animator animation={batch(Fade())}>
-        </Animator>
-      </ScrollPage>          
+        {/* <Animator animation={batch(Fade())}> */}
+        {/* </Animator>
+      </ScrollPage>           */}
         <SkillsWrap>
             {SkillsData.map(item => {
               return(
@@ -269,7 +346,7 @@ function App() {
                 })}
        </SkillsWrap>
    </ScrollContainer>
-        <Title>PROJECT</Title>
+        <PjTitle>PROJECT</PjTitle>
         <ProjectWrap>
           <Project/>
         </ProjectWrap>
@@ -278,18 +355,17 @@ function App() {
         <ContactWrap>
             {contactData.map(item => {
               return(
-                <LongCircle>
-                  <a href={item.link}><Circle> 
-                  {item.icon}
-                  </Circle>
+                <a href={item.link}>
+                    <CircleWrap>
+                      <Circle>{item.icon}</Circle>
+                      <Span>{item.text}</Span>
+                    </CircleWrap>
                   </a>
-                    <Span>{item.text}</Span>
-                </LongCircle>
               )
             })} 
 
         </ContactWrap>
-   
+        <Footer>&copy;2022 Portfolio <br /> yoonzet703@gmail.com / Lee yoonji</Footer>
    </>
   );
 }

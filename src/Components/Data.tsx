@@ -1,9 +1,8 @@
 
 import { BsGithub } from "react-icons/bs";
-import { IoCall, IoMailOutline,IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
+import { IoCall, IoMailOutline,IoLogoHtml5,IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
 import { DiJqueryLogo, DiGit } from "react-icons/di";
-import { SiStyledcomponents } from "react-icons/si";
-import { AiFillHtml5 } from "react-icons/ai";
+import { SiStyledcomponents, SiTypescript } from "react-icons/si";
 
 
 export const AboutMeData:{text: string} = {
@@ -40,7 +39,7 @@ interface ISkills{
 
 export const SkillsData: Array<ISkills> = [
   {
-    icon:<AiFillHtml5/>,
+    icon:<IoLogoHtml5/>, 
     name:'HTML',
   },
   {
@@ -58,6 +57,10 @@ export const SkillsData: Array<ISkills> = [
   {
     icon:<IoLogoReact/>,
     name:'React',
+  },
+  {
+    icon:<SiTypescript/>,
+    name:'TypeScript',
   },
   {
     icon:<DiGit/>,
@@ -83,10 +86,10 @@ interface IProject{
 export const ProjectData:Array<IProject> = [
   {
     img: "/img/cocktail.png",
-    title:' ',
+    title:'Portfolio',
     description:`React를 사용하여 만든 웹사이트입니다.`,
-    view:'https://yoonzet.github.io/cocktailRecipe/',
-    github:'https://github.com/yoonzet/cocktailRecipe',
+    view:'https://yoonzet.github.io/portfolio2022/',
+    github:'https://github.com/yoonzet/portfolio2022',
   },
   {
     img: "/img/cocktail.png",
@@ -122,16 +125,17 @@ export const contactData:Array<IContact> =[
     link:'https://github.com/yoonzet',
   },
   {
-    icon:'B',
+    icon:'blog',
     link:'https://jaylee-log.tistory.com/',
   },
   {
     icon:<IoCall />,
     link:'tel:010-4527-4851',
-    text:'010-4527-4851',
+    text:'010.4527.4851',
   },
   {
     icon:<IoMailOutline />,
+    link:'mailto:yoonzet703@gmail.com',
     text:'yoonzet703@gmail.com',
   },
 ]

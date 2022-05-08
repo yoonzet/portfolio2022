@@ -15,13 +15,14 @@ const PjImg = styled.img`
 const HoverWrap = styled.div`
   width: 100%;
   height: 102%;
-  background-color: #7845BF;
+  background-color: #A691F2;
   text-align: center;
   position: absolute;
   top:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   opacity: 0;
   transition: 0.5s;
   ${PjBox}:hover &{
@@ -29,17 +30,27 @@ const HoverWrap = styled.div`
     transform: translate(0, -100%);
     }
 `
+const Title = styled.h2`
+    @media screen and (max-width:800px) {
+      font-size: 18px;
+  }
+`
 const Dscr = styled.div`
     font-size: 18px;
+    @media screen and (max-width:800px) {
+      font-size: 15px;
+      padding: 0 5%;
+  }
 `
 const Button = styled.button`
     width: 100px;
     height: 30px;
-    border-radius: 50px;
     background-color: #282140;
-    margin: 30px 5px;
+    border-radius: 50px;
+    margin: 30px 10px 0 0;
     &:hover{
-      background-color: #A691F2;
+      background-color: #7845BF;
+
 
     }
 `
@@ -52,7 +63,7 @@ function Project() {
           <PjBox>
           <PjImg src={item.img} alt=""/>
           <HoverWrap>
-            <h2>{item.title}</h2>
+            <Title>{item.title}</Title>
             <Dscr>{item.description}</Dscr>
             <div>
               <a href={item.view} target="_blank" ><Button>view</Button></a>
