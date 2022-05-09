@@ -61,7 +61,7 @@ function Project() {
       {ProjectData.map(item => {
         return(
           <PjBox>
-          <PjImg src={item.img} alt=""/>
+          <PjImg src={process.env.PUBLIC_URL + `${item.img}`} alt=""/>
           <HoverWrap>
             <Title>{item.title}</Title>
             <Dscr>{item.description}</Dscr>

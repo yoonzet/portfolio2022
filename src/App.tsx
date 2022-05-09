@@ -8,7 +8,7 @@ import Project from "./Components/Project";
 
 
 
-// ----------First Pg-----------
+// ----------Styled-First Pg-----------
 
 const KeepAni = keyframes`
    0% {
@@ -32,15 +32,9 @@ const FirstPgWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #A691F2;
   background: linear-gradient(45deg, rgba(145,128,213,1) 0%, rgba(223,214,255,1) 100%);
-
-
-
-
-
   @media screen and (max-width:600px) {
-    background-color: #191919;
+    background:#191919;
   }
   
 `
@@ -66,7 +60,7 @@ const FirstP = styled.p`
   }
 `
 
-// --------- About me ---------
+// --------- Styled-About me ---------
 const Title = styled.h1`
     color: #eee;
     font-size: 60px;
@@ -165,7 +159,7 @@ const EduDcr = styled.p`
   font-size: 15px;
   line-height: 22px;
 `
-// ---------- Skills & Tools -----------
+// ---------- Styled-Skills & Tools -----------
 const SkillsWrap = styled.div`
   display: flex;
   justify-content: center;
@@ -197,7 +191,7 @@ const SkillP = styled.p`
   color: #fff;
   text-align: center;
 `
-// ---------- Project -----------
+// ---------- Styled-Project -----------
 
 const ProjectWrap = styled.div`
   color: #fff;
@@ -221,7 +215,7 @@ const PjTitle = styled(Title)`
 
 
 
-// ---------- Contact -----------
+// ---------- Styled-Contact -----------
 const ContactWrap = styled.div`
   /* width: 50vw; */
   height: 400px;
@@ -277,7 +271,7 @@ const Footer = styled.div`
 `
 
 
-// ---------- component -----------
+// ---------- COMPONENT -----------
 
 
 function App() {
@@ -305,7 +299,7 @@ function App() {
           </AboutMe>
          </Animator>
          <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
-          <Img src="/img/emoj.png" alt="" />
+          <Img src={process.env.PUBLIC_URL + "/img/emoj.png"} alt="" />
          </Animator> 
         </AboutMeWrap>
       </ScrollPage>      

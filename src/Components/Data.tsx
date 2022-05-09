@@ -85,9 +85,9 @@ interface IProject{
 }
 export const ProjectData:Array<IProject> = [
   {
-    img: "/img/cocktail.png",
+    img: "/img/portfolio.png",
     title:'Portfolio',
-    description:`React를 사용하여 만든 웹사이트입니다.`,
+    description:`React를 사용하여 만든 포트폴리오사이트입니다.`,
     view:'https://yoonzet.github.io/portfolio2022/',
     github:'https://github.com/yoonzet/portfolio2022',
   },
@@ -99,11 +99,11 @@ export const ProjectData:Array<IProject> = [
     github:'https://github.com/yoonzet/cocktailRecipe',
   },
   {
-    img: "/img/cocktail.png",
+    img: "/img/planer.png",
     title:'플래너앱',
     description:`JavaScript를 이용하여 만든 플래너앱입니다.`,
-    view:'https://yoonzet.github.io/cocktailRecipe/',
-    github:'https://github.com/yoonzet/cocktailRecipe',
+    view:'https://yoonzet.github.io/chromApp/',
+    github:'https://github.com/yoonzet/chromApp',
   },
   {
     img: "/img/krispy.png",
