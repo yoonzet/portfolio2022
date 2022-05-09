@@ -220,7 +220,6 @@ const ContactWrap = styled.div`
   /* width: 50vw; */
   height: 400px;
   /* background-color: #999; */
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,6 +242,7 @@ const Circle = styled.div`
   font-size: 20px;
   margin: 0 15px;
   transition: 0.3s;
+  color: #fff;
   &:hover{
     background-color: #A691F2;
   }
@@ -254,6 +254,7 @@ const Circle = styled.div`
 const Span = styled.span`
   font-size: 18px;
   display: none;
+  color: #fff;
 
   ${CircleWrap}:hover &{
     display: block;
