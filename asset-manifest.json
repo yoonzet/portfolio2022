@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/yoonzet/portfolio2022/static/css/main.a3d3902a.css",
-    "main.js": "/yoonzet/portfolio2022/static/js/main.64dec4ea.js",
-    "index.html": "/yoonzet/portfolio2022/index.html",
-    "main.a3d3902a.css.map": "/yoonzet/portfolio2022/static/css/main.a3d3902a.css.map",
-    "main.64dec4ea.js.map": "/yoonzet/portfolio2022/static/js/main.64dec4ea.js.map"
+    "main.css": "/portfolio2022/static/css/main.a3d3902a.css",
+    "main.js": "/portfolio2022/static/js/main.ecb4ddbb.js",
+    "index.html": "/portfolio2022/index.html",
+    "main.a3d3902a.css.map": "/portfolio2022/static/css/main.a3d3902a.css.map",
+    "main.ecb4ddbb.js.map": "/portfolio2022/static/js/main.ecb4ddbb.js.map"
   },
   "entrypoints": [
     "static/css/main.a3d3902a.css",
-    "static/js/main.64dec4ea.js"
+    "static/js/main.ecb4ddbb.js"
   ]
 }
