@@ -42,16 +42,17 @@ const Dscr = styled.div`
       padding: 0 5%;
   }
 `
-const Button = styled.button`
+const Button = styled.div`
     width: 100px;
     height: 30px;
     background-color: #282140;
     border-radius: 50px;
     margin: 30px 10px 0 0;
+    color: #fff;
+    line-height: 30px;
+    display:inline-block ;
     &:hover{
       background-color: #7845BF;
-
-
     }
 `
 
