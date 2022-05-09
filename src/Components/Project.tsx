@@ -33,6 +33,7 @@ const HoverWrap = styled.div`
 const Title = styled.h2`
     @media screen and (max-width:800px) {
       font-size: 18px;
+      font-weight: 700;
   }
 `
 const Dscr = styled.div`
@@ -51,6 +52,7 @@ const Button = styled.div`
     color: #fff;
     line-height: 30px;
     display:inline-block ;
+    text-align: center;
     &:hover{
       background-color: #7845BF;
     }

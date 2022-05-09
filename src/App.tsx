@@ -155,7 +155,7 @@ const EduDate = styled.p`
 `
 const EduDcr = styled.p`
   width: 50vw;
-  max-width: 400px;
+  max-width: 410px;
   font-size: 15px;
   line-height: 22px;
 `
