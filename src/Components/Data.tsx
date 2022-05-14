@@ -6,7 +6,7 @@ import { SiStyledcomponents, SiTypescript } from "react-icons/si";
 
 
 export const AboutMeData:{text: string} = {
-  text:'프론트엔드 개발의 매력에 빠지게 된 계기는 uxui 디자인을 배우기 위해 학원에서 웹디자인과정을 배우게된 후 였습니다. 저의 예상과 다르게 학원에선 디자인수업보단 기술(html, css, js) 위주의 수업을 배우게 되었지만 오히려 제 손끝에서 UI로 구현되는 모습을 보며 더욱 코딩의 매력을 느끼게 되었습니다. Javascript으로 생각보다 많은 기능을 동적으로 구현 할 수있다는 것을 알게된 후 좀 더 깊이 있게 배우고 싶어 강의들을 따로 찾아 듣기 시작했습니다. 배울수록 흥미를 느끼게 되었고 어느새 진로에 대한 노선은 자연스럽게 프론트엔드로 향하게 되었습니다. 현재는 React에 관심을 갖고 공부를 하고 있습니다. 앞으로도 빠르게 변화하는 시대에 발맞춰 멈추지 않고 저의 역량을 키워나가겠습니다.'
+  text:'손끝에서 부터 만들어지는 코드가 화면에 UI로 구현되는 모습을 보며 매력을 . Javascript으로 생각보다 많은 기능을 동적으로 구현할 수 있다는 것을 알게 된 후 좀 더 깊이 있게 배우고 싶어 강의들을 따로 찾아 듣기 시작했습니다. 배울수록 기능구현에 대한 성취감과 흥미를 느끼게 되었고 어느새 진로에 대한 노선은 자연스럽게 프론트엔드로 향하게 되었습니다. 현재는 React에 관심을 갖고 공부를 하고 있으며 다른 프레임 워크(vue 등)도 배울 계획을 갖고 있습니다.'
 }
 
 interface IEdu{
@@ -18,7 +18,7 @@ export const EduData:Array<IEdu> = [
   {
       title: '한밭대학교 시각디자인학과 졸업',
       date: '2014-2019',
-      description:'그래픽 툴을 잘 다루며, 디자인 전문지식을 갖추고 있어 협업시 웹디자너와의 원활한 소통을 할 수 있다는 장점을 가지고 있습니다. 또한 개발자로서 더 나은 UI를 위해 고민하고 연구하겠습니다.',
+      description:'디자인 전문지식을 갖추고 있어 협업시 웹디자너와의 원활한 소통을 할 수 있다는 장점을 가지고 있습니다. 또한 개발자로서 사용자들을 위해 더 나은 UI/UX를 고민하고 연구하겠습니다.',
   },
   {
       title: 'SBS컴퓨터 아카데미 웹디자인과정 수료',
@@ -87,14 +87,14 @@ export const ProjectData:Array<IProject> = [
   {
     img: "/img/portfolio.png",
     title:'Portfolio',
-    description:`React를 사용하여 만든 포트폴리오사이트입니다.`,
+    description:`React기반 포트폴리오사이트입니다.`,
     view:'https://yoonzet.github.io/portfolio2022/',
     github:'https://github.com/yoonzet/portfolio2022',
   },
   {
     img: "/img/cocktail.png",
     title:'Cocktail Recipe',
-    description:`API를 활용하여 다양한 칵테일레시피를 제공하는 반응형 웹사이트 입니다.`,
+    description:`API를 활용하여 다양한 칵테일레시피를 제공하는 React기반 반응형 웹사이트 입니다.`,
     view:'https://yoonzet.github.io/cocktailRecipe/',
     github:'https://github.com/yoonzet/cocktailRecipe',
   },
