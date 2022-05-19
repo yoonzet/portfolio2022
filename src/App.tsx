@@ -1,7 +1,7 @@
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, Move, MoveIn, MoveOut, Sticky, StickyIn, ZoomIn, ZoomOut, FadeOut, } from "react-scroll-motion";
 import styled, {keyframes} from "styled-components";
 import './App.css';
-import { AboutMeData, contactData, EduData, SkillsData } from "./Components/Data";
+import { AboutMeData, contactData, SkillsData } from "./Components/Data";
 import Project from "./Components/Project";
 
 
@@ -12,9 +12,9 @@ import Project from "./Components/Project";
 
 const KeepAni = keyframes`
    0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(400px);
-            transform: translateZ(400px);
+    /* letter-spacing: 1em; */
+    /* -webkit-transform: translateZ(400px);
+            transform: translateZ(400px); */
     opacity: 0;
   }
   40% {
@@ -84,16 +84,20 @@ const AboutMeWrap = styled.div`
   /* background-color: #333; */
 `
 const IntroTitle = styled.h2`
+  font-size: 50px;
+  line-height: 80px;
  @media screen and (max-width:600px) {
-   font-size: 18px;
+   font-size: 30px;
+   line-height: 50px;
+
   }
 `
 const AboutMe = styled.p`
     width: 50vw;
     max-width: 800px;
     color: #eee;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 22px;
+    white-space: nowrap;
     @media screen and (max-width:600px) {
       width: 85vw;
       font-size: 16px;
@@ -112,53 +116,7 @@ const Img = styled.img`
     display: none;
   }
 `
-// education
-const EducationWrap = styled.div`
-  color: white;
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-  margin-bottom: 150px;
-  @media screen and (max-width:600px) {
-   flex-direction: column;
-   margin-top: 50px;
-   margin-bottom: 0px;
-   align-items: center;
-  }
-`
 
-const EduH2 = styled.h2`
-  margin-right: 30px;
-  @media screen and (max-height:400px) {
-    text-align: center;
-  }
-`
-const EduUl = styled.ul`
-  border-left: 1px solid #fff;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  @media screen and (max-width:600px) {
-    /* border-left: 0; */
-  }
-`
-const EduLi = styled.li`
-  list-style: none;
- `
-const EduTitle = styled.h3`
-  line-height: 2px;
-`
-const EduDate = styled.p`
-  font-size: 14px;
-  font-weight: bold;
-`
-const EduDcr = styled.p`
-  width: 50vw;
-  max-width: 410px;
-  font-size: 15px;
-  line-height: 22px;
-`
 // ---------- Styled-Skills & Tools -----------
 const SkillsWrap = styled.div`
   display: flex;
@@ -169,6 +127,7 @@ const SkillsWrap = styled.div`
 const SkillH2 = styled.h2`
   text-align: center;
   color: #fff;
+  margin-top: 100px;
 `
 const SkillDiv = styled.div`
   display: flex;
@@ -295,8 +254,11 @@ function App() {
       </Animator>           
          <Animator animation={batch(MoveIn(0, 1000))}>
           <AboutMe>
-            <IntroTitle> 안녕하세요 저는 프론트엔드 개발자를 꿈꾸는 이윤지 입니다. </IntroTitle>
-            {AboutMeData.text}
+            <IntroTitle> 안녕하세요 <br />
+            프론트엔드 개발자를 꿈꾸는 <br/>
+            이윤지 입니다. </IntroTitle>
+            UX/UI에 관심이 많고 이를 위해 다양한 시도를 해보는것을 좋아합니다.<br />
+            사용자에게 최고의 편의성과 즐거운 경험을 이끌어 주는 개발자가 되고싶습니다.
           </AboutMe>
          </Animator>
          <Animator animation={batch(Fade(), MoveIn(0, 1000))}>
@@ -304,32 +266,9 @@ function App() {
          </Animator> 
         </AboutMeWrap>
       </ScrollPage>      
-      
-      {/* <ScrollPage page={2}>
-       <Animator animation={Fade()}> */}
-          <EducationWrap>
-            <EduH2>Education</EduH2>
-            <EduUl>
-              {EduData.map(item => {
-                return(       
-                  <EduLi>     
-                    {/* <Animator animation={MoveIn(50, -100)}>         */}
-                      <EduTitle>{item.title}</EduTitle>
-                      <EduDate>{item.date}</EduDate>
-                     {/* </Animator>   */}
-                     {/* <Animator animation={MoveIn(100, 80)}>       */}
-                      <EduDcr>{item.description}</EduDcr>
-                      {/* </Animator>   */}
-                  </EduLi> 
-                )
-              })}
-            </EduUl>
-          </EducationWrap>
-        {/* </Animator> */}
+     
         <SkillH2>SKILLS & TOOLS</SkillH2>
-        {/* <Animator animation={batch(Fade())}> */}
-        {/* </Animator>
-      </ScrollPage>           */}
+        
         <SkillsWrap>
             {SkillsData.map(item => {
               return(

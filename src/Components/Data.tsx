@@ -6,31 +6,31 @@ import { SiStyledcomponents, SiTypescript } from "react-icons/si";
 
 
 export const AboutMeData:{text: string} = {
-  text:'개발의 매력에 빠지게 된 계기는 학원에서 웹디자인 수업을 들으면서부터 였습니다. html, css, js 위주의 수업을 배우게 되면서 제 손끝에서 UI로 구현되는 화면을 보며 재미와 코딩의 매력을 느끼게 되었습니다. Javascript으로 생각보다 많은 기능을 동적으로 구현할 수 있다는 것을 알게 된 후 좀 더 깊이 있게 배우고 싶어 강의들을 따로 찾아 듣기 시작했습니다. 배울수록 기능구현에 대한 성취감과 흥미를 느끼게 되었고 어느새 진로에 대한 노선은 자연스럽게 프론트엔드로 향하게 되었습니다. 현재는 React와 TypeScript에 관심을 갖고 공부를 하고 있습니다.'
+  text:'UX/UI에 관심이 많고 이를 위해 다양한 시도를 해보는것을 좋아합니다. 사용자에게 최고의 편의성과 즐거운 경험을 이끌어 주는 개발자가 되고싶습니다. '
 }
 
-interface IEdu{
-  title: string, 
-  date: string, 
-  description:string
-}
-export const EduData:Array<IEdu> = [
-  {
-      title: '한밭대학교 시각디자인학과 졸업',
-      date: '2014-2019',
-      description:'디자인 전문지식을 갖추고 있어 협업시 웹디자이너와의 원활한 소통을 할 수 있다는 장점을 가지고 있습니다. 또한 개발자로서 사용자들을 위해 더 나은 UI/UX를 고민하고 연구하겠습니다.',
-  },
-  {
-      title: 'SBS컴퓨터 아카데미 웹디자인과정 수료',
-      date: '2021.09-2022.03',
-      description:'HTML5, CSS3, JS의 기본지식의 초석을 다졌으며 피그마, 반응형디자인 UI의 마크업과 git의 사용법 등을 익혔습니다',
-  },
-  {
-      title: '노마드코더 바닐라JS 챌린지 22기',
-      date: '2022.03',
-      description:'최종 졸업생 307명 중에서 우수졸업생(19명)으로 선정되었습니다.',
-  },
-]
+// interface IEdu{
+//   title: string, 
+//   date: string, 
+//   description:string
+// }
+// export const EduData:Array<IEdu> = [
+//   {
+//       title: '한밭대학교 시각디자인학과 졸업',
+//       date: '2014-2019',
+//       description:'디자인 전문지식을 갖추고 있어 협업시 웹디자이너와의 원활한 소통을 할 수 있다는 장점을 가지고 있습니다. 또한 개발자로서 사용자들을 위해 더 나은 UI/UX를 고민하고 연구하겠습니다.',
+//   },
+//   {
+//       title: 'SBS컴퓨터 아카데미 웹디자인과정 수료',
+//       date: '2021.09-2022.03',
+//       description:'HTML5, CSS3, JS의 기본지식의 초석을 다졌으며 피그마, 반응형디자인 UI의 마크업과 git의 사용법 등을 익혔습니다',
+//   },
+//   {
+//       title: '노마드코더 바닐라JS 챌린지 22기',
+//       date: '2022.03',
+//       description:'최종 졸업생 307명 중에서 우수졸업생(19명)으로 선정되었습니다.',
+//   },
+// ]
 
 interface ISkills{
   icon: any,
@@ -51,16 +51,16 @@ export const SkillsData: Array<ISkills> = [
     name:'JavaScrips',
   },
   {
-    icon:<DiJqueryLogo/>,
-    name:'jQuery',
+    icon:<SiTypescript/>,
+    name:'TypeScript',
   },
   {
     icon:<IoLogoReact/>,
     name:'React',
   },
   {
-    icon:<SiTypescript/>,
-    name:'TypeScript',
+    icon:<SiStyledcomponents/>,
+    name:'Styled-components',
   },
   {
     icon:<DiGit/>,
@@ -69,10 +69,6 @@ export const SkillsData: Array<ISkills> = [
   {
     icon:<BsGithub/>,
     name:'Github',
-  },
-  {
-    icon:<SiStyledcomponents/>,
-    name:'Styled-components',
   },
 ]
 
