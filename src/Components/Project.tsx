@@ -38,9 +38,18 @@ const Title = styled.h2`
 `
 const Dscr = styled.div`
     font-size: 18px;
+    padding: 0 10%;
+    line-height: 30px;
     @media screen and (max-width:800px) {
-      font-size: 15px;
-      padding: 0 5%;
+      line-height: 25px;
+      font-size: 14px;
+  }
+`
+const Skill = styled.p`
+    font-size: 16px;
+    padding: 0 10%;
+    @media screen and (max-width:1000px) {
+      display: none;
   }
 `
 const Button = styled.div`
@@ -68,6 +77,7 @@ function Project() {
           <HoverWrap>
             <Title>{item.title}</Title>
             <Dscr>{item.description}</Dscr>
+            <Skill><b>사용기술</b> <br />{item.skill}</Skill>
             <div>
               <a href={item.view} target="_blank" ><Button>view</Button></a>
               <a href={item.github} target="_blank" ><Button>Github</Button></a>
