@@ -6,7 +6,6 @@ React기반으로 만든 포트폴리오 사이트입니다.
 
 - About Me
   - About Me
-  - Education
   - Skills & Tools
 - Project
 
