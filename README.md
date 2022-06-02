@@ -1,8 +1,9 @@
 ## 포트폴리오 (https://yoonzet.github.io/portfolio2022/)
 
 React기반으로 만든 포트폴리오 사이트입니다.
+#
 
-### <목차>
+> ### 목차
 
 - About Me
   - About Me
@@ -21,10 +22,12 @@ React기반으로 만든 포트폴리오 사이트입니다.
   - Phone
   - E-mail
 
-### 사용한 라이브러리
+# 
 
-##### React
+> ### 사용한 라이브러리
 
-##### styled-component
+- React
 
-##### react-scroll-motion
+- styled-component
+
+- react-scroll-motion
