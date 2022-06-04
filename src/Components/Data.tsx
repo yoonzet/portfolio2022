@@ -94,8 +94,8 @@ export const ProjectData:Array<IProject> = [
     title:'My wish list',
     description:`위시리스트를 관리할 수 있는 웹사이트 입니다. 생성/추가/수정/삭제, 바로가기 기능, 총 금액을 합산 할 수 있는 기능을 넣어 제작하였습니다.`,
     skill: '[React, TypeScript] Hooks(useSate, useRef), Recoil, styled-component',
-    view:'https://yoonzet.github.io/cocktailRecipe/',
-    github:'https://github.com/yoonzet/cocktailRecipe',
+    view:'https://yoonzet.github.io/mywishlist/',
+    github:'https://github.com/yoonzet/mywishlist',
   },
   {
     img: "/img/cocktail.png",
