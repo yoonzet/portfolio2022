@@ -5,9 +5,32 @@ import { DiJqueryLogo, DiGit } from "react-icons/di";
 import { SiStyledcomponents, SiTypescript } from "react-icons/si";
 
 
-export const AboutMeData:{text: string} = {
-  text:'UX/UI에 관심이 많고 이를 위해 다양한 시도를 해보는것을 좋아합니다. 사용자에게 최고의 편의성과 즐거운 경험을 이끌어 주는 개발자가 되고싶습니다. '
-}
+export const AboutMeData = [
+  {
+      title: 'name',
+      description: '이윤지 LEE YOONJI'
+  },
+  {
+      title: 'Birth',
+      description: '1995. 06. 17'
+  },
+  {
+      title: 'Phone',
+      description: '010.4527.4851'
+  },
+  {
+      title: 'Email',
+      description: 'yoonzet703@gmail.com'
+  },
+  // {
+  //     title: 'blog ',
+  //     link: 'https://jaylee-log.tistory.com/'
+  // },
+  // {
+  //     title: 'Github',
+  //     link: 'https://github.com/yoonzet'
+  // },
+]
 
 // interface IEdu{
 //   title: string, 
@@ -32,12 +55,9 @@ export const AboutMeData:{text: string} = {
 //   },
 // ]
 
-interface ISkills{
-  icon: any,
-  name: string
-}
 
-export const SkillsData: Array<ISkills> = [
+
+export const SkillsData = [
   {
     icon:<IoLogoHtml5/>, 
     name:'HTML',
@@ -81,14 +101,14 @@ interface IProject{
   github: string 
 }
 export const ProjectData:Array<IProject> = [
-  {
-    img: "/img/portfolio.png",
-    title:'Portfolio',
-    description:`React기반 포트폴리오사이트입니다.`,
-    skill: '[React, TypeScript] react-scroll-motion, styled-component',
-    view:'https://yoonzet.github.io/portfolio2022/',
-    github:'https://github.com/yoonzet/portfolio2022',
-  },
+  // {
+  //   img: "/img/portfolio.png",
+  //   title:'Portfolio',
+  //   description:`React기반 포트폴리오사이트입니다.`,
+  //   skill: '[React, TypeScript] react-scroll-motion, styled-component',
+  //   view:'https://yoonzet.github.io/portfolio2022/',
+  //   github:'https://github.com/yoonzet/portfolio2022',
+  // },
   {
     img: "/img/mywishlist.png",
     title:'My wish list',

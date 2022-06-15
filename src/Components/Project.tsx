@@ -38,7 +38,7 @@ const Title = styled.h2`
 `
 const Dscr = styled.div`
     font-size: 18px;
-    padding: 0 10%;
+    padding: 20px 10%;
     line-height: 30px;
     @media screen and (max-width:800px) {
       line-height: 25px;
@@ -47,7 +47,7 @@ const Dscr = styled.div`
 `
 const Skill = styled.p`
     font-size: 16px;
-    padding: 0 10%;
+    padding: 20px 10%;
     @media screen and (max-width:1000px) {
       display: none;
   }
