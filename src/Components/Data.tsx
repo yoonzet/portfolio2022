@@ -92,15 +92,7 @@ export const SkillsData = [
   },
 ]
 
-interface IProject{
-  img: string,
-  title: string,
-  description: string,
-  skill: string,
-  view: string,
-  github: string 
-}
-export const ProjectData:Array<IProject> = [
+export const ProjectData = [
   // {
   //   img: "/img/portfolio.png",
   //   title:'Portfolio',
@@ -110,34 +102,38 @@ export const ProjectData:Array<IProject> = [
   //   github:'https://github.com/yoonzet/portfolio2022',
   // },
   {
-    img: "/img/mywishlist.png",
-    title:'My wish list',
-    description:`위시리스트를 관리할 수 있는 웹사이트 입니다. 생성/추가/수정/삭제, 바로가기 기능, 총 금액을 합산 할 수 있는 기능을 넣어 제작하였습니다.`,
-    skill: '[React, TypeScript] Hooks(useSate, useRef), Recoil, styled-component',
-    view:'https://yoonzet.github.io/mywishlist/',
-    github:'https://github.com/yoonzet/mywishlist',
-  },
-  {
-    img: "/img/cocktail.png",
+    img: "/img/Mock01.jpg",
     title:'Cocktail Recipe',
     description:`API를 이용하여 칵테일DB를 통해 칵테일의 레시피 정보를 제공하는 웹사이트 입니다. 로그인, 검색기능, 찜하기 기능 등을 구현하였습니다.`,
-    skill: '[React] Hooks(useState, useEffect), Router, firebase, Recoil, styled- component, Framer-motion',
+    base:'#React',
+    skill: " #Hooks(useState, useEffect) #Router #firebase #Recoil #styled-component #Framer-motion",
     view:'https://yoonzet.github.io/cocktailRecipe/',
     github:'https://github.com/yoonzet/cocktailRecipe',
   },
   {
-    img: "/img/planer.png",
+    img: "/img/Mock02.jpg",
+    title:'My wish list',
+    description:`위시리스트를 관리할 수 있는 웹사이트 입니다. 생성/추가/수정/삭제, 바로가기 기능, 총 금액을 합산 할 수 있는 기능을 넣어 제작하였습니다.`,
+    base:'#React/TypeScript ',
+    skill: ' #Hooks(useSate, useRef) #Recoil #styled-component',
+    view:'https://yoonzet.github.io/mywishlist/',
+    github:'https://github.com/yoonzet/mywishlist',
+  },
+  {
+    img: "/img/Mock03.jpg",
     title:'플래너앱',
     description:`날씨정보 제공, 날짜/시간 기능, todo-list, 캘린더, d-day등 기능을 갖춘 플래너 앱입니다.`,
-    skill: '[JavaScript] 현재위치, 기온, 날씨 API를 이용한 정보제공, 로컬스토리지 저장',
+    base:'#JavaScript ',
+    skill: '현재위치, 기온, 날씨 API를 이용한 정보제공, 로컬스토리지 저장',
     view:'https://yoonzet.github.io/chromApp/',
     github:'https://github.com/yoonzet/chromApp',
   },
   {
-    img: "/img/krispy.png",
+    img: "/img/Mock04.jpg",
     title:'크리스피크림도넛 리뉴얼',
     description:`크리스피도넛 웹사이트를 리디자인하여 반응형으로 제작하였습니다. 자연스러운 애니메이션 효과를 넣어 동적인 UI마크업 을 연습하였습니다.`,
-    skill: '[Html, css, jQuery] 미디어쿼리, 키프레임, jQuery라이브러리(슬릭슬라이드, 풀페이지, 스크롤매직)',
+    base:'#Html, css, jQuery ',
+    skill: ' #미디어쿼리  #키프레임 #jQuery라이브러리(슬릭슬라이드, 풀페이지, 스크롤매직)',
     view:'https://yoonzet.github.io/krispykreme_dounut/',
     github:'https://github.com/yoonzet/krispykreme_dounut',
   },
