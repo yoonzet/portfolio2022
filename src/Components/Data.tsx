@@ -102,6 +102,7 @@ export const ProjectData = [
   //   github:'https://github.com/yoonzet/portfolio2022',
   // },
   {
+    index:'01',
     img: "/img/Mock01.jpg",
     title:'Cocktail Recipe',
     description:`API를 이용하여 칵테일DB를 통해 칵테일의 레시피 정보를 제공하는 웹사이트 입니다. 로그인, 검색기능, 찜하기 기능 등을 구현하였습니다.`,
@@ -111,6 +112,7 @@ export const ProjectData = [
     github:'https://github.com/yoonzet/cocktailRecipe',
   },
   {
+    index:'02',
     img: "/img/Mock02.jpg",
     title:'My wish list',
     description:`위시리스트를 관리할 수 있는 웹사이트 입니다. 생성/추가/수정/삭제, 바로가기 기능, 총 금액을 합산 할 수 있는 기능을 넣어 제작하였습니다.`,
@@ -120,6 +122,7 @@ export const ProjectData = [
     github:'https://github.com/yoonzet/mywishlist',
   },
   {
+    index:'03',
     img: "/img/Mock03.jpg",
     title:'플래너앱',
     description:`날씨정보 제공, 날짜/시간 기능, todo-list, 캘린더, d-day등 기능을 갖춘 플래너 앱입니다.`,
@@ -129,6 +132,7 @@ export const ProjectData = [
     github:'https://github.com/yoonzet/chromApp',
   },
   {
+    index:'04',
     img: "/img/Mock04.jpg",
     title:'크리스피크림도넛 리뉴얼',
     description:`크리스피도넛 웹사이트를 리디자인하여 반응형으로 제작하였습니다. 자연스러운 애니메이션 효과를 넣어 동적인 UI마크업 을 연습하였습니다.`,

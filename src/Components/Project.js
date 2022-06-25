@@ -8,6 +8,7 @@ function Project() {
         return(
           <div className='projectWrap'>
             <div className='imgWrap'>
+              <p>{item.index}</p>
               <img src={process.env.PUBLIC_URL + `${item.img}`}/>
             </div>
 

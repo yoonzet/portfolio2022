@@ -4,6 +4,8 @@
 }
 html,body{
   height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+
 }
 
 ol,
@@ -19,6 +21,10 @@ a {
 
 
 /* 라이브러리 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
 @font-face {
   font-family: 'IBMPlexSansKR-Bold';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
@@ -190,24 +196,46 @@ a {
 /* ------ project ------ */
 .projectTitle{
   font-size: 70px;
+  font-weight: 800;
   text-align: center;
-  color: #828CDE;
+  color: #111;
   margin: 150px 0 50px 0;
+  position: relative;
+  margin: 0 auto
+}
+.projectTitle::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background-color: #E8E1A4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s;
 }
 .projectWrap{
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 130px;
+  padding: 20vh 130px;
   box-sizing: border-box;
+  position: relative;
 }
 .projectWrap .imgWrap{
   width: 35vw;  
   margin-right: 80px;
 }
-.projectWrap img{
+.projectWrap .imgWrap p{
+  font-size: 15vw;
+  color: #E8E1A4;
+  font-weight: 900;
+  opacity: 0.6;
+  position: absolute;
+  z-index: -1;
+  transform: translate(-15vw, -12vw);
+}
+.projectWrap .imgWrap img{
   width: 100%;  
   border-radius: 12px;  
 }
@@ -216,6 +244,7 @@ a {
    color: #64614B;
 }
 .projectWrap .rightWrap h1{
+  font-weight: 900;
   margin-bottom: 50px;
 }
 .projectWrap .rightWrap p{
