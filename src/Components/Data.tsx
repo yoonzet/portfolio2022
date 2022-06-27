@@ -135,7 +135,7 @@ export const ProjectData = [
     index:'04',
     img: "/img/Mock04.jpg",
     title:'크리스피크림도넛 리뉴얼',
-    description:`크리스피도넛 웹사이트를 리디자인하여 반응형으로 제작하였습니다. 자연스러운 애니메이션 효과를 넣어 동적인 UI마크업 을 연습하였습니다.`,
+    description:`크리스피도넛 웹사이트를 리디자인하여 반응형으로 제작하였습니다. 자연스러운 애니메이션 효과를 넣어 동적인 UI마크업을 작업했습니다.`,
     base:'#Html, css, jQuery ',
     skill: ' #미디어쿼리  #키프레임 #jQuery라이브러리(슬릭슬라이드, 풀페이지, 스크롤매직)',
     view:'https://yoonzet.github.io/krispykreme_dounut/',

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { ProjectData } from './Data';
 
-function Project() {
+const Project = forwardRef<HTMLDivElement>
+((props, ref) => {
   return (
       <>
+      <h1 ref={ref} className="projectTitle">PROJECT<div/> </h1>
       {ProjectData.map(item => {
         return(
           <div className='projectWrap'>
@@ -33,6 +35,6 @@ function Project() {
       })}
       </>
   )
-}
+});
 
 export default Project;

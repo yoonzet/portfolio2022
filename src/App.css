@@ -53,12 +53,43 @@ a {
 
 }
 
+/* ------ nav ------ */
+.navWrap{
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  text-align: right;
+}
+.navWrap li{
+  display: inline-block;
+  margin: 30px;
+  font-weight: 800;
+  color: #64614B;
+  cursor: pointer;
+  position: relative;
+}
+.navWrap li::after{
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E8E1A4;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s;
+}
+.navWrap li:hover::after{
+  opacity: 1;
+  transform: translate(-50%,-10px)
+}
 
 /* ------ intro ------ */
 .introWrap{
-  width: 95vw;
-  height: 95vh;
-  margin:2.5vh auto;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,6 +105,30 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.introWrap .circle-dotted{
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  border: 5px dotted #E8E1A4;
+  position: absolute;
+  animation-name: circle;
+	animation-duration: 60s;
+  animation-direction:alternate;
+  animation-iteration-count:infinite
+}
+@keyframes circle {
+  0% {
+    /* opacity: 0; */
+    transform: rotate(0deg);
+  }
+  100%{
+    /* opacity: 1; */
+    transform: rotate(360deg);
+  }
+}
+.introWrap h1{
+  position: absolute;
 }
 
 .introWrap .keep{
@@ -93,6 +148,7 @@ a {
   flex-direction: column;
 }
 
+
 .aboutMe .introduceWrap{
  display: flex;
  position: relative;
@@ -106,6 +162,8 @@ a {
   z-index: -1;
   transform: translate(130%, -50%);
 }
+
+
 .aboutMe h1{
   font-size: 60px;
   margin-bottom: 30px;
@@ -132,10 +190,8 @@ a {
   justify-content: center;
 }
 .aboutMe .btn p {
-  border:1px solid transparent;
   margin: 15px;
   color: #64614B;
-  /* line-height: 55px; */
   font-weight: bold;
   cursor: pointer;
   position: relative;
@@ -195,25 +251,24 @@ a {
 
 /* ------ project ------ */
 .projectTitle{
+  margin: 200px 0;
   font-size: 70px;
   font-weight: 800;
+  color: #333;
+  /* background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #E8E1A4 50%); */
   text-align: center;
-  color: #111;
-  margin: 150px 0 50px 0;
-  position: relative;
-  margin: 0 auto
+  padding: 0 20px;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
-.projectTitle::after {
-  content: '';
-  width: 100%;
-  height: 5px;
+.projectTitle div{
+  width: 100px;
+  height: 15px;
+  margin: 20px auto;
   background-color: #E8E1A4;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  transition: 0.3s;
 }
+
 .projectWrap{
   display: flex;
   justify-content: center;
@@ -224,10 +279,11 @@ a {
 }
 .projectWrap .imgWrap{
   width: 35vw;  
-  margin-right: 80px;
+  /* margin-right: 80px; */
+
 }
 .projectWrap .imgWrap p{
-  font-size: 15vw;
+  font-size: 14vw;
   color: #E8E1A4;
   font-weight: 900;
   opacity: 0.6;
@@ -241,11 +297,13 @@ a {
 }
 .projectWrap .rightWrap{
   max-width: 400px;
-   color: #64614B;
+  padding: 5vw;
+  color: #64614B;
 }
 .projectWrap .rightWrap h1{
   font-weight: 900;
   margin-bottom: 50px;
+  color: #111;
 }
 .projectWrap .rightWrap p{
   margin: 35px 0;
@@ -260,14 +318,14 @@ a {
   border: 1px solid transparent;
   border-radius: 20px;
   margin: 0 10px;
+  cursor: pointer;
 }
 .projectWrap .btnWrap a:hover{
   background-color: transparent;
   border: 1px solid #E8E1A4;
-  cursor: pointer;
 }
 
-/* ------ project ------ */
+/* ------ footer ------ */
   .footer{
   padding: 100px;
   text-align: center;
@@ -275,15 +333,65 @@ a {
   color: #333;
 }
 
-/* @media screen and (max-width:1500px) {
+@media screen and (max-width:1500px) {
+    
+  .introWrap .circle{
+    width: 60vw;
+    height: 60vw;
+  }
+  .introWrap .circle-dotted{
+    width: 62vw;
+    height: 62vw;
+  }
+  .aboutMe .introduceWrap .circle{
+    display: none;
+  }
+  .aboutMe .introduceWrap{
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+   }
+   .aboutMe h1{
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    color: #111;
+  }
+  .aboutMe .introduceWrap .introduce{
+    width: 50vw;
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
   .projectWrap{
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-  padding: 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20vh 130px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .projectWrap .imgWrap{
+    min-width: 500px;
+  }
+  .projectWrap .imgWrap p{
+    transform: translate(-9vw, -13vw);
   }
   
 }
 @media screen and (max-width:600px) {
+  .introWrap .keep{
+    font-size: 70px;
+  }  
   .projectWrap{
-    padding: 0 10%;
+    padding: 10vh 100px;
   }
-} */
+  .projectWrap .imgWrap{
+    min-width: 300px;
+    
+  }
+  
+}
