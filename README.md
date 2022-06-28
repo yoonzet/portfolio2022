@@ -6,8 +6,7 @@ React기반으로 만든 포트폴리오 사이트입니다.
 > ### 목차
 
 - About Me
-  - About Me
-  - Skills & Tools
+- Skills
 - Project
 
   - Cocktail Recipe [view](https://yoonzet.github.io/cocktailRecipe/) / [github](https://github.com/yoonzet/cocktailRecipe)
