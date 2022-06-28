@@ -92,7 +92,7 @@ a {
 
 /* ------ intro ------ */
 .introWrap{
-  @include width-height(100vw, 100vw );
+  @include width-height(100vw, 100vh );
   @include flex-center(row);
   background-color: #F8F7F5;
 }
@@ -139,8 +139,9 @@ a {
 /* ------ aboutMe ------ */
 
 .aboutMe {
-  @include width-height(100vw, 100vw);
+  @include width-height(100vw, 100%);
   @include flex-center(column);
+  margin: 10% 0;
   color: #64614B;
 }
 .aboutMe .introduceWrap{
