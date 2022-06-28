@@ -54,6 +54,7 @@
     "@babel/plugin-transform-runtime": "^7.18.5",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
+    "sass": "^1.53.0",
     "ts-loader": "^9.3.0"
   },
   "homepage": "https://yoonzet.github.io/portfolio2022/"

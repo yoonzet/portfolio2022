@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import './App.css';
+import './App.scss';
 import AboutMe from "./Components/AboutMe";
 import Skills from "./Components/Skills";
 import Project from "./Components/Project";

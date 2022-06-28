@@ -1,11 +1,13 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
-html,body{
-  height: 100%;
-  font-family: 'Noto Sans KR', sans-serif;
 
+html, body {
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 ol,
@@ -19,158 +21,166 @@ a {
   text-decoration: none;
 }
 
-
-/* 라이브러리 */
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-.notosanskr * { 
- font-family: 'Noto Sans KR', sans-serif;
+/* font */
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
 }
+
 @font-face {
-  font-family: 'IBMPlexSansKR-Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff') format('woff');
+  font-family: "IBMPlexSansKR-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,900&display=swap');
-
 @font-face {
-  font-family: 'PyeongChangPeace-Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
-
-.title{
-  font-family: 'IBMPlexSansKR-Bold';
-  font-size: 80px;
-}
-
-.active{
-  /* display: none; */
-  width: 50px;
-  height: 50px;
-  color: transparent;
-
-}
-
+/* ------ mixin ------ */
 /* ------ nav ------ */
-.navWrap{
+.navWrap {
   width: 100%;
   position: fixed;
   z-index: 99;
   text-align: right;
 }
-.navWrap li{
+
+.navWrap li {
   display: inline-block;
-  margin: 30px;
+  margin-top: 30px;
+  margin-right: 50px;
   font-weight: 800;
   color: #64614B;
   cursor: pointer;
   position: relative;
+  transition: 0.5s;
 }
-.navWrap li::after{
-  content: '';
-  width: 8px;
-  height: 8px;
+
+.navWrap li:hover {
+  transform: scale(1.2);
+}
+
+.navWrap li::after {
+  content: "";
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #E8E1A4;
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%) scale(0);
   z-index: -1;
-  opacity: 0;
+  opacity: 1;
   transition: 0.3s;
 }
-.navWrap li:hover::after{
+
+.navWrap li:hover::after {
   opacity: 1;
-  transform: translate(-50%,-10px)
+  transform: translate(-50%, -50%);
 }
 
 /* ------ intro ------ */
-.introWrap{
+.introWrap {
   width: 100vw;
-  height: 100vh;
+  height: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   background-color: #F8F7F5;
 }
-  
-.introWrap .circle{
+
+.introWrap .circle {
   width: 600px;
   height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-radius: 50%;
   background-color: #E8E1A4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-.introWrap .circle-dotted{
+
+.introWrap .circle-dotted {
   width: 620px;
   height: 620px;
   border-radius: 50%;
   border: 5px dotted #E8E1A4;
   position: absolute;
-  animation-name: circle;
-	animation-duration: 60s;
-  animation-direction:alternate;
-  animation-iteration-count:infinite
+  -webkit-animation-name: circle;
+          animation-name: circle;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
-@keyframes circle {
+
+@-webkit-keyframes circle {
   0% {
-    /* opacity: 0; */
     transform: rotate(0deg);
+    border: 5px dotted #E8E1A4;
   }
-  100%{
+  100% {
     /* opacity: 1; */
     transform: rotate(360deg);
+    border: 5px dotted #64614B;
   }
 }
-.introWrap h1{
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+    border: 5px dotted #E8E1A4;
+  }
+  100% {
+    /* opacity: 1; */
+    transform: rotate(360deg);
+    border: 5px dotted #64614B;
+  }
+}
+.introWrap h1 {
   position: absolute;
 }
 
-.introWrap .keep{
+.introWrap .keep {
   font-size: 128px;
   color: #111;
-  font-family: 'PyeongChangPeace-Bold';
+  font-family: "PyeongChangPeace-Bold";
 }
-/* ------ aboutMe ------ */
 
+/* ------ aboutMe ------ */
 .aboutMe {
   width: 100vw;
-  height: 100vh;
-  color: #64614B;
+  height: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: #64614B;
 }
 
-
-.aboutMe .introduceWrap{
- display: flex;
- position: relative;
-}
-.aboutMe .introduceWrap .circle{
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background-color: #E8E1A4;
-  position: absolute;
-  z-index: -1;
-  transform: translate(130%, -50%);
+.aboutMe .introduceWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
-
-.aboutMe h1{
+.aboutMe .introduceWrap h1 {
   font-size: 60px;
   margin-bottom: 30px;
   font-weight: 800;
   color: #111;
 }
-.aboutMe .introduceWrap .introduce{
+
+.aboutMe .introduceWrap .introduce {
   width: 50vw;
   max-width: 800px;
   font-size: 20px;
@@ -178,41 +188,72 @@ a {
   margin-bottom: 20px;
 }
 
-.aboutMe .introduceWrap .imgWrap{
+.aboutMe .introduceWrap .imgWrap {
   width: 250px;
   margin-right: 50px;
 }
-.aboutMe .introduceWrap img{
+
+.aboutMe .introduceWrap img {
   width: 100%;
 }
-.aboutMe .btn{
+
+.aboutMe .profileWrap .circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin-top: 80px;
+  padding: 60px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
+
+.aboutMe .profileWrap .circle-dotted {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 2px dotted #E8E1A4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation-name: circle;
+          animation-name: circle;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.aboutMe .profileWrap ul li {
+  display: inline;
+  line-height: 40px;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.aboutMe .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .aboutMe .btn p {
   margin: 15px;
   color: #64614B;
   font-weight: bold;
   cursor: pointer;
   position: relative;
-}
-.aboutMe .btn p::after {
-  content: '';
-  width: 0;
-  height: 5px;
-  background-color: #E8E1A4;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
   transition: 0.3s;
 }
-.aboutMe .btn p:hover::after {
-  width: 100%;
 
+.aboutMe .btn p:hover {
+  transform: scale(0.95);
 }
-
-
 
 /* ------ skills ------ */
 .skills {
@@ -227,62 +268,65 @@ a {
   text-align: center;
   color: #64614B;
 }
-.skills ul {  
+
+.skills ul {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
 }
-.skills ul li{  
+
+.skills ul li {
   display: flex;
   flex-direction: column;
-  margin: 0 50px ;
+  margin: 0 50px;
 }
 
-.skills ul li h3{
+.skills ul li h3 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   font-size: 50px;
   transition: 0.3s;
   margin: 20px 0;
 }
-.skills ul li:hover h3{
+
+.skills ul li:hover h3 {
   transform: scale(105%);
 }
 
 /* ------ project ------ */
-.projectTitle{
+.projectTitle {
   margin: 200px 0;
   font-size: 70px;
   font-weight: 800;
   color: #333;
-  /* background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #E8E1A4 50%); */
   text-align: center;
   padding: 0 20px;
-  /* position: absolute; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
 }
-.projectTitle div{
+
+.projectTitle div {
   width: 100px;
   height: 15px;
   margin: 20px auto;
   background-color: #E8E1A4;
 }
 
-.projectWrap{
+.projectWrap {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   padding: 20vh 130px;
   box-sizing: border-box;
   position: relative;
 }
-.projectWrap .imgWrap{
-  width: 35vw;  
-  /* margin-right: 80px; */
 
+.projectWrap .imgWrap {
+  width: 35vw;
 }
-.projectWrap .imgWrap p{
+
+.projectWrap .imgWrap p {
   font-size: 14vw;
   color: #E8E1A4;
   font-weight: 900;
@@ -291,107 +335,120 @@ a {
   z-index: -1;
   transform: translate(-15vw, -12vw);
 }
-.projectWrap .imgWrap img{
-  width: 100%;  
-  border-radius: 12px;  
+
+.projectWrap .imgWrap img {
+  width: 100%;
+  border-radius: 12px;
 }
-.projectWrap .rightWrap{
+
+.projectWrap .rightWrap {
   max-width: 400px;
   padding: 5vw;
   color: #64614B;
 }
-.projectWrap .rightWrap h1{
+
+.projectWrap .rightWrap h1 {
   font-weight: 900;
   margin-bottom: 50px;
   color: #111;
 }
-.projectWrap .rightWrap p{
+
+.projectWrap .rightWrap p {
   margin: 35px 0;
 }
-.projectWrap .btnWrap{
+
+.projectWrap .btnWrap {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.projectWrap .btnWrap a{
+
+.projectWrap .btnWrap a {
   padding: 8px 20px;
   background-color: #E8E1A4;
-  border: 1px solid transparent;
   border-radius: 20px;
   margin: 0 10px;
   cursor: pointer;
+  transition: 0.2s;
 }
-.projectWrap .btnWrap a:hover{
-  background-color: transparent;
-  border: 1px solid #E8E1A4;
+
+.projectWrap .btnWrap a:hover {
+  transform: scale(0.95);
 }
 
 /* ------ footer ------ */
-  .footer{
+.footer {
   padding: 100px;
   text-align: center;
   font-size: 12px;
   color: #333;
 }
 
-@media screen and (max-width:1500px) {
-    
-  .introWrap .circle{
+@media screen and (max-width: 1500px) {
+  .introWrap .circle {
     width: 60vw;
     height: 60vw;
   }
-  .introWrap .circle-dotted{
+
+  .introWrap .circle-dotted {
     width: 62vw;
     height: 62vw;
   }
-  .aboutMe .introduceWrap .circle{
-    display: none;
-  }
-  .aboutMe .introduceWrap{
+
+  .aboutMe .introduceWrap {
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center;
-   }
-   .aboutMe h1{
-    font-size: 60px;
-    margin-bottom: 30px;
-    font-weight: 800;
-    color: #111;
-  }
-  .aboutMe .introduceWrap .introduce{
-    width: 50vw;
-    max-width: 500px;
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 20px;
   }
 
-  .projectWrap{
+  .aboutMe .introduceWrap .txtWrap {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+  }
+
+  .aboutMe .introduceWrap h1 {
+    font-size: 50px;
+  }
+
+  .projectWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 20vh 130px;
     box-sizing: border-box;
     position: relative;
   }
-  .projectWrap .imgWrap{
+
+  .projectWrap .imgWrap {
     min-width: 500px;
   }
-  .projectWrap .imgWrap p{
+
+  .projectWrap .imgWrap p {
     transform: translate(-9vw, -13vw);
   }
-  
 }
-@media screen and (max-width:600px) {
-  .introWrap .keep{
+@media screen and (max-width: 600px) {
+  .navWrap {
+    text-align: center;
+  }
+
+  .introWrap .keep {
     font-size: 70px;
-  }  
-  .projectWrap{
+  }
+
+  .aboutMe .introduceWrap h1 {
+    font-size: 30px;
+  }
+
+  .projectWrap {
     padding: 10vh 100px;
   }
-  .projectWrap .imgWrap{
+
+  .projectWrap .imgWrap {
     min-width: 300px;
-    
   }
-  
-}
+}/*# sourceMappingURL=App.css.map */

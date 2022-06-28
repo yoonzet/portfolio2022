@@ -8,7 +8,7 @@ import { SiStyledcomponents, SiTypescript } from "react-icons/si";
 export const AboutMeData = [
   {
       title: 'name',
-      description: '이윤지 LEE YOONJI'
+      description: '이윤지'
   },
   {
       title: 'Birth',
