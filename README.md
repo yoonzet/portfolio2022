@@ -28,6 +28,4 @@ React기반으로 만든 포트폴리오 사이트입니다.
 
 - React
 
-- styled-component
-
-- react-scroll-motion
+- scss
