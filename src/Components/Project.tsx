@@ -17,8 +17,9 @@ const Project = forwardRef<HTMLDivElement>
             <div className='rightWrap'>
               <h1>{item.title}</h1>
               <b className='strong'>{item.description}</b>
+              
               <p>
-                {item.base}기반 <br />
+                <b>{item.base}</b> <br />
                 {item.skill}
               </p>
               <div className='btnWrap'>
